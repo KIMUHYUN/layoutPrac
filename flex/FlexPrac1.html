@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout練習 1</title>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+    body {
+        background-color: #FFF3E0
+    }
+    #wrap {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    #header {
+        width: 1200px;
+        height: 100px;
+        background-color: #FFE0B2;
+    }
+    #nav {
+        width: 1200px;
+        height: 100px;
+        background-color: #FFCC80;
+    }
+    #main {
+        display: flex;
+    }
+    #aside {
+        width: 400px;
+        height: 780px;
+        background-color: #FFB74D;
+    }
+    #section {
+        width: 800px;
+        height: 780px;
+        background-color: #FFA726;
+    }
+    #footer {
+        width: 1200px;
+        height: 100px;
+        background-color: #FF9800;
+    }
+</style>
+<body>
+    <div id="wrap">
+        <div id="header">header</div>
+        <div id="nav">nav</div>
+        <!-- flex는 부모 자식관계에서만 영향을 미치기 때문에
+            aside 요소와 section 요소의 부모 main 요소한테만 flex를 선언 -->
+        <div id="main"> 
+            <div id="aside">aside</div>
+            <div id="section">section</div>
+        </div>
+        <div id="footer">footer</div>
+    </div>
+</body>
+</html>
