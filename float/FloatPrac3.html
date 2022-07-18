@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>layout練習 2</title>
+    <title>layout練習 3</title>
 </head>
 <style>
     * {
-        margin: 0;
+        background-color: #e1e1e1;
     }
     #wrap {
         width: 1200px;
@@ -25,39 +25,61 @@
         background-color: #A5D6A7;
     }
     #main {
-        display: grid;
-        grid-template-columns: 300px 600px 300px;
-        grid-template-rows: 780px;
+        /* overflow: hidden; */
     }
     #aside {
         width: 300px;
         height: 780px;
-        background-color: #81C784;
+        background-color: #4FC3F7;
+        float: left;
+    }
+    #article1 {
+        width: 900px;
+        height: 260px;
+        background-color: #29B6F6;
+        float: left;
+    }
+    #article2 {
+        width: 900px;
+        height: 260px;
+        background-color: #03A9F4;
+        float: left;
+    }
+    #article3 {
+        width: 900px;
+        height: 260px;
+        background-color: #039BE5;
+        float: left;
     }
     #section {
         width: 600px;
         height: 780px;
         background-color: #66BB6A;
     }
-    #article {
-        width: 300px;
-        height: 780px;
-        background-color: #4CAF50;
-    }
     #footer {
         width: 1200px;
         height: 100px;
         background-color: #43A047;
+         /* clear: both; */
+    }
+    .clearfix:before, .clearfix:after {
+        content: '';
+        display: block;
+        line-height: 0;
+    }
+    .clearfix:after {
+        clear:both;
     }
 </style>
 <body>
     <div id="wrap">
         <header id="header"></header>
         <nav id="nav"></nav>
-        <main id="main">
+        <main id="main" class="clearfix">
             <aside id="aside"></aside>
-            <section id="section"></section>
-            <article id="article"></article>
+            <article id="article1"></article>
+            <article id="article2"></article>
+            <article id="article3"></article>
         </main>
         <footer id="footer"></footer>
     </div>
